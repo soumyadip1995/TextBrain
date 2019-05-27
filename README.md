@@ -93,3 +93,6 @@ re-compilation of front-end:
 > rm -rf client/dist;cd client/src/; npm run build; cd ../..
 ```
 
+## Result
+
+![alt_text](https://drive.google.com/file/d/12e7qT0X4qQtOdj6vM7BHYh5E5dl7QqUy/view?usp=sharing)
