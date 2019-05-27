@@ -1,0 +1,309 @@
+<body id="container" style="background-color:#9D351B" >
+        <div id="header">
+                <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+                <meta charset="UTF-8">
+                <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+                <!-- jQuery -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                <!-- Semantic Main CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+                <!-- Semantic Reset CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/reset.min.css"/>
+                <!-- Semantic Menu CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/menu.min.css"/>
+                <!-- Main Semantic JS  -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+                <!-- Custom CSS -->
+                <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+                <!-- Browser tab name -->
+                <title>{{ title }}</title>
+                <!-- Navbar -->
+                <div class="ui attached inverted menu">
+                    
+                    <div class="right menu">
+                 
+                           
+                            <div class="item">
+                                <a class="ui default button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Dash</a>
+                            </div>
+                
+                    </div>
+                </div>
+        
+        </div>
+ 
+
+<br><br>
+<center>
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GLTR (glitter) v0.5 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="start.css">
+    <!--<link rel="stylesheet" type="text/css" href="vendor.css">-->
+    <meta name="twitter:card" content="summary_large_image">
+    <!--<meta name="twitter:site" content="@nytimes">-->
+    <!--<meta name="twitter:creator" content="@SarahMaslinNir">-->
+    <meta name="twitter:title" content="GLTR from MIT-IBM Watson AI Lab and HarvardNLP">
+    <meta name="twitter:description" content="This demo enables forensic inspection of the visual footprint 
+          of a language model on input text to detect whether a text could be real or fake.">
+    <meta name="twitter:image" content="http://gltr.io/overview.png">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135666388-1"></script>
+
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135666388-1');
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <!DOCTYPE html>
+
+        <div class="floating_content">
+            
+          
+            <div class='demo'style="font-weight:bold; color:white;">Upload your text(s) here:</div>
+           <!-- <div class="demos"></div> -->
+<div class="test">
+
+<script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+<!-- Change /upload-target to your upload address -->
+<form action="/upload-target" class="dropzone"></form>
+    <div id="loader" style="top:50px;opacity:1;transition-property: opacity; transition-duration: .5s;"> Loading...
+    </div>
+ 
+    
+
+</div>
+
+
+            <!-- INPUT TEXT -->
+            <!--        <div id="text-input">-->
+            <div style="padding-top: 10px; color:white;><span class="demo">or </span>enter a text:</div>
+            <!--        <textarea id="test_text" rows="10" cols="80">The cat was playing in the garden.</textarea>-->
+            <textarea id="test_text" style="width: 100%;height: 50px;">The cat was playing in the garden.</textarea>
+            <br>
+            <button id="submit_text_btn"> Validate</button>
+            <script src="https://checkout.stripe.com/checkout.js"></script>
+
+<button id="customButton">Purchase</button>
+
+<script>
+
+
+var handler = StripeCheckout.configure({
+  key: 'pk_test_gHKi6jarVqKBf1aNaWo2vPb400rRMw8LP7',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+
+    var node = document.getElementById('results'),
+
+htmlContent = node.innerHTML,
+// htmlContent = "Some <span class="foo">sample</span> text."
+
+textContent = node.textContent;
+console.log('hello')
+
+var x = document.getElementById("results").innerText;
+
+
+  // Open Checkout with further options:
+  handler.open({
+    name: 'TextBrain',
+    description: 'Monthly Subscription',
+    amount: 2000
+  });
+  e.preventDefault();
+
+   document.getElementById('customButton').remove();
+    this.remove();
+
+
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+  document.getElementById('customButton').remove();
+document.getElementsByClassName("customButton")[0].disabled=true;
+
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+
+<button id="customButton2">Grade</button>
+
+  <img id="img" crossOrigin src="https://i.imgur.com/JlUvsxa.jpg" width=1 height=1/>
+
+<script>
+  
+var test = document.getElementById('customButton2');
+
+
+
+test.onclick = function() {
+
+    
+  // Change this to div.childNodes to support multiple top-level nodes
+
+    var mylist = document.getElementById('customButton2');
+   mylist.insertAdjacentHTML('afterend', '<br><br><b><a style="color: white">Validity: 95% <br>Grade: 82%</a></b>');
+
+
+    const a = tf.data.array(1);
+    console.log(a)
+
+    let net;
+
+async function app() {
+  console.log('Loading mobilenet..');
+
+
+  
+// net = await tf.loadLayersModel('model.json');
+
+  // // Load the model.
+  // net = await mobilenet.load();
+  // console.log('Sucessfully loaded model');
+
+  // Make a prediction through the model on our image.
+  const imgEl = document.getElementById('img');
+  const result = await net.classify(imgEl);
+  console.log(result);
+}
+
+app();
+}
+
+</script>
+
+
+    
+
+
+
+
+
+
+            <div class="loadersmall" style="margin-left:1pt;display: none;"></div>
+
+
+            <div id="all_result" style="opacity:0;transition-duration: .5s;display: none;">
+
+                <div id="stats" style="text-align:center;">
+                    <div style="display:inline-block;text-align: center">
+                        <div style="color:white;"  >top k count</div>
+                        <svg id="stats_top_k"></svg>
+                    </div>
+                    <div style="display:inline-block;text-align: center">
+                        <div style="color:white;" >frac(p) histogram</div>
+                        <svg id="stats_frac"></svg>
+                    </div>
+                    <div style="display:inline-block;text-align: center">
+                        <div style="color:white;" >top 10 entropy(p) histogram</div>
+                        <svg id="stats_entropy"></svg>
+                    </div>
+                </div>
+                <div id="#res" style="margin-top: 10px;">
+
+                    <div style="display: inline-block;padding-right: 20px;">
+                        <button id="mode_topk" class="btn_mode selected"> Top K
+                        </button>
+                        <!-- <button id="mode_diff_p" class="btn_mode"> Diff P</button> -->
+                        <button id="mode_frac_p" class="btn_mode"> Frac P</button>
+                    </div>
+                    <div style="display: inline-block; color: orange">
+                        Scores:
+                        <div
+                            style="width: 15px; height: 15px;background-color: #ADFF80; display: inline-block;position: relative; top:3px;">
+                        </div>
+                        <input value=10 type="number" id="color1" class='colorThreshold' style="width:50px;" />
+                        <div
+                            style="width: 15px; height: 15px;background-color: #FFEA80; display: inline-block;position: relative;  top:3px;">
+                        </div>
+                        <input value=100 type="number" id="color2" class='colorThreshold' style="width:50px;" />
+                        <div
+                            style="width: 15px; height: 15px;background-color: #FF9280; display: inline-block;position: relative;  top:3px;">
+                        </div>
+                        <input value=1000 type="number" id="color3" class='colorThreshold' style="width:50px;" />
+                        <div
+                            style="width: 15px; height: 15px;background-color: #E5B0FF; display: inline-block;position: relative;  top:3px;">
+                        </div>
+                    </div>
+
+                    <div id="results" style="margin-top: 10px;">
+
+                    </div>
+                    
+                </div>
+
+
+
+
+
+                <!-- <div style="height: 160px;"></div> -->
+
+                <!--        </div>-->
+            </div>
+         
+        </div>
+
+    </div>
+
+
+    <div id="major_tooltip" class='tooltip'
+        style="background: #dddddd;width: 200px; position: fixed;pointer-events: none;opacity: 0;">
+        <div class="predictions" style="display: table;">
+
+        </div>
+
+        <br />
+        <div class="myDetail">
+
+        </div>
+
+
+    </div>
+
+
+
+  
+
+    
+
+
+    <script src="vendor.js"></script>
+    <script src="start.js"></script>
+
+</body>
+
+
+</html>
