@@ -47,6 +47,8 @@ Credits for the base repository go to [this](https://github.com/HendrikStrobelt/
 - Copyleaks API
 - Tensorflow.js
 
+note- D3.js is already integrated
+
 ## Quickstart
 
 Install dependencies for Python >3.6 :
