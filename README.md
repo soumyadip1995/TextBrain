@@ -6,8 +6,8 @@
 This is the blog post for  for **TextBrain**, a tool  that automatically grades and validates texts. In order to validate texts, it uses the copyleaks API to check for plagiarism. It also uses a modified version of GPT-2 to detect the likelihood that the text was real or fake. Then it outputs a validation score using these 2 scores. In order to grade the text, it uses a neural network model trained on the automatic essay/text grading dataset on Kaggle found here [here](https://www.kaggle.com/c/asap-aes/data) .Take this project and go build a profitable startup with it...!!!
 
 
-#### See the full Jupyter Notebook For TextBrain [here](https://github.com/soumyadip1995/TextBrain---Building-an-AI-start-up-using-NLP/blob/master/TextBrain_Building_an_AI_start_up_using_NLP_ipynb.ipynb)
-#### Read The full Blog post for TextBrain [here](https://soumyadip1995.blogspot.com/2019/05/textbrain-building-ai-startup-using-nlp.html)
+#### See the full Jupyter Notebook For TextBrain [here](https://github.com/soumyadip1995/TextBrain---Building-an-AI-start-up-using-NLP/blob/master/TextBrain_Building_an_AI_start_up_using_NLP_ipynb.ipynb). You can Run the Full Jupyter Notebook In google Colab
+#### Read The full Blog post for TextBrain [here](https://soumyadip1995.blogspot.com/2019/05/textbrain-building-ai-startup-using-nlp.html).
 
 
 
