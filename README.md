@@ -1,3 +1,20 @@
+
+
+
+## Overview 
+
+This is the blog post for  for TextBrain, a tool  that automatically grades and validates texts. In order to validate texts, it uses the copyleaks API to check for plagiarism. It also uses a modified version of GPT-2 to detect the likelihood that the text was real or fake. Then it outputs a validation score using these 2 scores. In order to grade the text, it uses a neural network model trained on the automatic essay/text grading dataset on Kaggle found here [here](https://www.kaggle.com/c/asap-aes/data) .Take this project and go build a profitable startup with it...!!!
+
+
+
+
+
+
+
+
+
+
+
 ## Language Models
 
 ![alt_text](http://gltr.io/figs/histogram.png)
