@@ -109,6 +109,9 @@ re-compilation of front-end:
 ```bash
 > rm -rf client/dist;cd client/src/; npm run build; cd ../..
 ```
+
+
+#### check out the live demo of the GLTR [here](http://gltr.io/dist/index.html)
 ## Result
 
 ![alt_text](https://github.com/soumyadip1995/TextBrain---Building-an-AI-start-up-using-NLP/blob/master/Screenshot%20(151).png?raw=true)
